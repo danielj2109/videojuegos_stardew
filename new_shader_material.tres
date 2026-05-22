@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b6ha1lltmsxqh"]
+
+[ext_resource type="Shader" uid="uid://bx8g4rpn4usup" path="res://shaders/flash.tres" id="1_50bgh"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_50bgh")
+shader_parameter/Color = Color(1, 1, 1, 1)
+shader_parameter/Parameter = 0.0
