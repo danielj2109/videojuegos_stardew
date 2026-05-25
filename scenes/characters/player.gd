@@ -7,7 +7,7 @@ var can_move: bool = true
 @onready var move_state_machine = $Animation/AnimationTree.get("parameters/MoveStateMachine/playback")
 @onready var toll_state_machine = $Animation/AnimationTree.get("parameters/ToolStateMachine/playback")
 var current_tool: Enum.Tool = Enum.Tool.AXE
-var current_Seed: Enum.Seed
+var current_seed: Enum.Seed = Enum.Seed.CORN
 
 signal tool_use(tool: Enum.Tool, post: Vector2)
 
@@ -26,10 +26,11 @@ func get_basic_input():
 	if Input.is_action_just_pressed("tool_forward") or Input.is_action_just_pressed("tool_backward"):
 		var dir = Input.get_axis("tool_backward", "tool_forward")
 		current_tool = posmod(current_tool + int(dir), Enum.Tool.size()) as Enum.Tool
+		$ToolUI.reveal(true)
 			
 	if Input.is_action_just_pressed("seed_forward"):
-		current_Seed = posmod(current_Seed + 1, Enum.Seed.size()) as Enum.Seed
-		print(current_Seed)
+		current_seed = posmod(current_seed + 1, Enum.Seed.size()) as Enum.Seed
+		$ToolUI.reveal(false)
 	
 	if Input.is_action_just_pressed("action"):
 		toll_state_machine.travel(Data.TOOL_STATE_ANIMATIONS[current_tool])

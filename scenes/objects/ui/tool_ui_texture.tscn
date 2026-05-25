@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bj4g0mwn55ji5"]
+
+[ext_resource type="Texture2D" uid="uid://btjy01hwoemkf" path="res://graphics/icons/axe.png" id="1_hgcah"]
+[ext_resource type="Script" uid="uid://cri66ivxyfl6o" path="res://scenes/objects/ui/tool_ui_texture.gd" id="1_s52m3"]
+
+[node name="ToolUITexture" type="Control" unique_id=599604262]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 20.0
+offset_bottom = 20.0
+script = ExtResource("1_s52m3")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1767463995]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hgcah")
+expand_mode = 2

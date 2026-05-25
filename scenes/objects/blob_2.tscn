@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://byp8sg4rp6mjr"]
+[gd_scene format=3 uid="uid://dtsbwt0xfr1ai"]
 
-[ext_resource type="Script" uid="uid://dvuurs2tov26c" path="res://scenes/objects/blob.gd" id="1_3y2e6"]
-[ext_resource type="PackedScene" uid="uid://cvox86rxyddbw" path="res://scenes/vfx/flash_sprite_2d.tscn" id="1_f7lc2"]
-[ext_resource type="Shader" uid="uid://bx8g4rpn4usup" path="res://shaders/flash.tres" id="2_3y2e6"]
-[ext_resource type="Texture2D" uid="uid://b466fqj7w4mne" path="res://graphics/characters/blob.png" id="3_eba5w"]
+[ext_resource type="Script" uid="uid://dvuurs2tov26c" path="res://scenes/objects/blob.gd" id="1_rkot3"]
+[ext_resource type="PackedScene" uid="uid://cvox86rxyddbw" path="res://scenes/vfx/flash_sprite_2d.tscn" id="2_pyyt7"]
+[ext_resource type="Shader" uid="uid://bx8g4rpn4usup" path="res://shaders/flash.tres" id="3_h557l"]
+[ext_resource type="Texture2D" uid="uid://b466fqj7w4mne" path="res://graphics/characters/blob.png" id="4_w3yic"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3y2e6"]
 resource_local_to_scene = true
-shader = ExtResource("2_3y2e6")
+shader = ExtResource("3_h557l")
 shader_parameter/Color = Color(1, 1, 1, 1)
 shader_parameter/Parameter = 0.0
 
@@ -83,13 +83,13 @@ _data = {
 &"move": SubResource("Animation_f1v85")
 }
 
-[node name="Blob" type="CharacterBody2D" unique_id=1918682556]
+[node name="Blob2" type="CharacterBody2D" unique_id=1918682556]
 collision_layer = 4
-script = ExtResource("1_3y2e6")
+script = ExtResource("1_rkot3")
 
-[node name="FlashSprite2D" parent="." unique_id=139079039 instance=ExtResource("1_f7lc2")]
+[node name="FlashSprite2D" parent="." unique_id=139079039 instance=ExtResource("2_pyyt7")]
 material = SubResource("ShaderMaterial_3y2e6")
-texture = ExtResource("3_eba5w")
+texture = ExtResource("4_w3yic")
 hframes = 14
 vframes = 4
 
